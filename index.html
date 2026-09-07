@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111d" />
+    <title>Signal AI — 每日 AI 技术情报</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Signal AI 首页"><span class="brand-mark">✦</span>SIGNAL <i>AI</i></a>
+      <nav aria-label="主导航"><a class="active" href="#feed">情报流</a><a href="#radar">技术雷达</a><a href="#sources">信源</a></nav>
+      <div class="header-actions"><span class="status"><b></b>直播中</span><button class="icon-button" id="theme-toggle" title="切换主题" aria-label="切换主题">◐</button><button class="subscribe" id="subscribe-button">订阅周报 <span>↗</span></button></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow">AI INTELLIGENCE BRIEFING <span></span> 2025.06.18</div>
+        <div class="hero-copy"><h1>从噪音中，<em>看见</em><br />下一次跃迁。</h1><p>聚合官方发布、开源社区与全球媒体，<br />每天用十分钟读懂 AI 正在发生什么。</p></div>
+        <div class="ticker"><span>NOW SCANNING</span><div><b>OPENAI</b><i></i><b>ANTHROPIC</b><i></i><b>GITHUB</b><i></i><b>HN</b><i></i><b>机器之心</b><i></i><b>THE VERGE</b></div></div>
+      </section>
+
+      <section class="briefing" id="feed">
+        <div class="section-heading"><div><span class="kicker">TODAY'S BRIEFING</span><h2>今日必读 <sup>06</sup></h2></div><button class="outline-button" id="mark-read">全部标为已读</button></div>
+        <div class="topic-tabs" role="tablist"><button class="selected" data-topic="all">全部</button><button data-topic="模型">模型</button><button data-topic="Agent">Agent</button><button data-topic="开源">开源</button><button data-topic="产业">产业</button><button data-topic="研究">研究</button></div>
+        <div class="content-grid"><div class="article-list" id="article-list"></div><aside class="side-panel"><div class="panel-head"><span>热度雷达</span><small>LIVE</small></div><ol id="radar"></ol><a class="panel-link" href="#sources">查看全部信号 <span>→</span></a></aside></div>
+      </section>
+
+      <section class="signal-section" id="radar"><div class="section-heading"><div><span class="kicker">SIGNAL MAP</span><h2>技术正在往哪走</h2></div><p>基于近 7 天 1,240 条信号聚合</p></div><div class="signal-grid"><article class="signal-card blue"><span>01 / AGENT</span><h3>从「会用工具」<br />到「自主完成任务」</h3><p>Agent 的评测、记忆与协作框架正成为下一个开源热点。</p><div class="trend"><b>+34%</b><span>本周讨论度</span></div></article><article class="signal-card cream"><span>02 / MODELS</span><h3>推理模型的<br />成本正在下降</h3><p>小型模型与测试时计算，让复杂推理开始走向普惠。</p><div class="trend"><b>+21%</b><span>本周讨论度</span></div></article><article class="signal-card dark"><span>03 / OPEN SOURCE</span><h3>本地模型，<br />迎来部署拐点</h3><p>更长上下文和更低量化精度，加速端侧智能的实际落地。</p><div class="trend"><b>+18%</b><span>本周讨论度</span></div></article></div></section>
+
+      <section class="sources" id="sources"><div><span class="kicker">CURATED SOURCES</span><h2>不是更多信息，<br />而是更好的信号。</h2></div><div class="source-groups"><div><span>官方 / 实验室</span><p>OpenAI · Anthropic · Google DeepMind · Meta AI · Hugging Face</p></div><div><span>社区 / 开发者</span><p>GitHub Trending · Hacker News · r/MachineLearning · r/LocalLLaMA</p></div><div><span>全球媒体</span><p>机器之心 · 量子位 · TechCrunch · The Verge · VentureBeat · The Decoder</p></div><div><span>精选 Newsletter</span><p>The Batch · Import AI · TLDR AI</p></div></div></section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">✦</span>SIGNAL <i>AI</i></a><span>为好奇的人，追踪智能的边界。</span><span>© 2025 SIGNAL AI</span></footer>
+
+    <dialog id="subscribe-dialog"><button class="close" aria-label="关闭">×</button><span class="kicker">WEEKLY SIGNAL</span><h2>把重要的 AI，<br />送到你的收件箱。</h2><p>每周一封，精选本周真正值得关注的变化。</p><form id="subscribe-form"><input type="email" aria-label="邮箱地址" placeholder="你的邮箱地址" required /><button type="submit">免费订阅 →</button></form><small id="form-message"></small></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
